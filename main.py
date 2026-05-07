@@ -14,10 +14,10 @@ df_boston = pd.read_sql("""
 """, conn)
 
 df_zero_emp = pd.read_sql("""
-    SELECT o.officeCode, o.city 
-    FROM offices o 
-    LEFT JOIN employees e ON o.officeCode = e.officeCode 
-    WHERE e.employeeNumber IS NULL;
+SELECT o.officeCode, o.city
+FROM offices o
+LEFT JOIN employees e ON o.officeCode = e.officeCode
+WHERE e.employeeNumber IS NULL;
 """, conn)
 
 # Part 2: Type of Join
